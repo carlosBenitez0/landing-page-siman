@@ -5,7 +5,7 @@
 :root {
     /* colors */
     /* Color principal para elementos destacados */
-    --main-color: rgb(168, 51, 56);
+    --main-color: #A83338;
 
     /* Color más oscuro para encabezados importantes, botones primarios, y énfasis */
     --colorR150: #6e0000;
@@ -45,6 +45,18 @@ h3 {
     font-family: 'Merriweather', serif;
 }
 
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
 .accent {
     font-family: 'Raleway', sans-serif;
 }
@@ -57,7 +69,6 @@ h3 {
 }
 
 .nav {
-    border: 3px solid black;
     height: 7rem;
     display: flex;
     align-items: center;
@@ -65,7 +76,7 @@ h3 {
 }
 
 .nav__logo {
-    height: 7rem;
+    height: 5rem;
 }
 
 .nav__hamburguer {
@@ -131,8 +142,6 @@ h3 {
     margin-bottom: 1rem;
 }
 
-.material-symbols-outlined {}
-
 .nav__link {
     text-decoration: none;
     color: var(--almost-white);
@@ -165,4 +174,68 @@ h3 {
     text-decoration: none;
 }
 
-.nav__login--border {}
+/* HERO */
+
+.hero__grid {
+    overflow: hidden;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-areas:
+        "img img img"
+        ".   text   .";
+
+}
+
+.hero__title {
+    color: transparent;
+    /* Hacemos el texto transparente para aplicar el degradado como fondo */
+    background: linear-gradient(to right, #ba333a, #960000, #ff1212);
+    /* Degradado lineal de izquierda a derecha */
+    -webkit-background-clip: text;
+    /* Para navegadores basados en WebKit (Chrome, Safari) */
+    background-clip: text;
+}
+
+.hero__picture {
+    grid-area: img;
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.hero__img {
+    width: 100%;
+}
+
+.hero__text {
+    grid-area: text;
+    padding: 5.6rem 0 2rem 0;
+    text-align: center;
+}
+
+.hero__p {
+    line-height: 1.5rem 0;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.hero__cta {
+    font-size: 2rem;
+    background-color: var(--colorR150);
+    color: #fff;
+    display: inline-block;
+    padding: .7rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.social__media {
+    display: grid;
+    gap: 3rem;
+    grid-auto-flow: column;
+    justify-content: center;
+}
+
+.social__icon {
+    height: 4rem;
+    width: 4rem;
+}
