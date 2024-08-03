@@ -259,3 +259,86 @@ h3 {
 .just-space {
     height: 3rem;
 }
+
+@media (min-width: 768px) {
+    .nav {
+        gap: 2rem;
+        overflow: visible;
+        padding: 4rem 0;
+        display: flex;
+    }
+
+    .nav__hamburguer {
+        display: none;
+    }
+
+    .nav__overlay {
+        position: unset;
+        background-color: transparent;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .nav__menu {
+        position: unset;
+        width: 100%;
+        max-width: unset;
+        background-color: unset;
+        padding: 0;
+        overflow: unset;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: max-content;
+    }
+
+    .nav__item {
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .nav__link {
+        color: var(--almost-black);
+        font-size: 1.8rem;
+        width: max-content;
+        font-weight: 600;
+    }
+
+    .nav__sign {
+        padding: 1rem;
+        color: var(--colorR150);
+        font-size: 1.8rem;
+        font-weight: 600;
+        width: max-content;
+    }
+
+    .nav__login--border-t {
+        border-top: unset;
+        padding-top: unset;
+    }
+
+    .nav__login--border {
+        border-radius: 1rem;
+        margin-top: unset;
+        outline: 1px solid var(--colorR150);
+    }
+
+    .nav__menu li>a {
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .nav__menu li:hover>a {
+        background-color: var(--colorR50);
+        color: #fff;
+        background: linear-gradient(to right, var(--colorR100), var(--colorR75));
+    }
+
+
+
+    .nav__login:last-child:hover {
+        outline: unset;
+    }
+}
