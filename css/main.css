@@ -234,11 +234,13 @@ h3 {
     font-weight: 700;
 }
 
-.hero__text a:last-child {
+.hero__contact {
     background-color: white;
     border: 2px solid var(--colorR150);
     color: var(--colorR150);
 }
+
+.hero__text a:last-child {}
 
 
 .social__media {
@@ -258,6 +260,10 @@ h3 {
 /* colocar espacio al final del home */
 .just-space {
     height: 3rem;
+}
+
+.no-visible {
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -336,9 +342,139 @@ h3 {
         background: linear-gradient(to right, var(--colorR100), var(--colorR75));
     }
 
-
-
     .nav__login:last-child:hover {
         outline: unset;
     }
+
+    .hero__grid {
+        display: grid;
+        margin: 0 auto;
+        max-width: 1200px;
+        width: 90%;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "text img";
+        padding: 2rem 0;
+    }
+
+    .hero__left {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .hero__cta:first-child:hover {
+        background-color: var(--colorR100);
+    }
+
+    .hero__picture {
+        grid-area: img;
+        max-height: 500px;
+    }
+
+    .hero__img {
+        height: 100%;
+    }
+
+    .hero__text {
+        grid-area: text;
+        text-align: left;
+    }
+
+    .hero__picture {
+        text-align: left;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__buttons {
+        margin: auto 0 0 0;
+        justify-content: unset;
+    }
+
+    .hero__text {
+        margin: auto 0;
+    }
+
+    .hero__title {
+        font-size: 5rem;
+    }
+
+    .hero__p {
+        font-size: 2.3rem;
+    }
+
+    .hero__buttons {
+        justify-content: left;
+    }
+
+    .social__media {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .social__icon {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .hero__contact {
+        position: relative;
+        border: unset;
+    }
+
+    .hero__contact::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: var(--colorR150);
+        transition: width .3s;
+    }
+
+    .hero__contact:hover::before {
+        width: 100%;
+    }
+
+
+
+    /* HERO */
+    /* 
+    
+    .hero__cta {
+        font-size: 2rem;
+        background-color: var(--colorR150);
+        color: #fff;
+        display: inline-block;
+        padding: .7rem 1rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    .hero__text a:last-child {
+        background-color: white;
+        border: 2px solid var(--colorR150);
+        color: var(--colorR150);
+    }
+    
+    
+    .social__media {
+        display: grid;
+        gap: 3rem;
+        grid-auto-flow: column;
+        justify-content: center;
+    }
+    
+    .social__icon {
+        height: 4rem;
+        width: 4rem;
+        cursor: pointer;
+    } */
 }

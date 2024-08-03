@@ -7,3 +7,17 @@ nav_hamburguer.addEventListener("click", () => {
   nav_overlay.classList.toggle("nav__overlay--show");
   nav_menu.classList.toggle("nav__menu--show");
 });
+
+const social_desktop = document.querySelector(".social-desktop");
+const social_mobile = document.querySelector(".social-mobile");
+
+console.log(social_desktop);
+console.log(social_mobile);
+
+window.onload = function () {
+  if (window.innerWidth >= 768) {
+    social_mobile.classList.toggle("no-visible");
+  } else {
+    social_desktop.classList.toggle("no-visible");
+  }
+};
