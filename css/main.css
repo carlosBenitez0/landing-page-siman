@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* colors */
+    /* Color principal para elementos destacados */
+    --main-color: rgb(168, 51, 56);
+
+    /* Color más oscuro para encabezados importantes, botones primarios, y énfasis */
+    --colorR150: #6e0000;
+
+    /* Color oscuro para subtítulos, bordes, y elementos secundarios */
+    --colorR125: #830d0b;
+
+    /* Color medio para fondos de secciones, efectos de hover, etc.*/
+    --colorR100: #971a16;
+
+    /* Color más claro para fondos alternativos, iconos, etc. */
+    --colorR75: #ac2620;
+
+    /* Color más claro para acentos y enlaces*/
+    --colorR50: #c0332b;
+
+    /* Color casi blanco, para secciones en las que el fondo es alguno de los anteriores */
+    --almost-white: rgb(231, 231, 231);
+    --almost-black: rgb(21, 21, 21);
+
+    /* fonts */
+    /* - Open Sans: Para el texto principal y cuerpos de texto (p, li, span, etc.) */
+    --open_sans: "Open Sans", sans-serif;
+    /* - Merriweather: Para encabezados y títulos destacados (h1, h2, h3, etc.) */
+    --Merriweather: "Merriweather", serif;
+    /* - Raleway: Para botones, etiquetas de filtro, etc. (clases específicas como .brand, .accent, botones especiales, etc.) */
+    --raleway: "Raleway", sans-serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Merriweather', serif;
+}
+
+.accent {
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.nav {
+    border: 3px solid black;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo {
+    height: 7rem;
+}
+
+.nav__hamburguer {
+    width: 40px;
+    height: 50%;
+    background-image: url("../multimedia/menu-ham.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 100;
+    filter: invert(0);
+    transition: background-image, filter .3s;
+    border-radius: 50%;
+    /* filter: drop-shadow(0 0 .5rem white); */
+}
+
+.nav__hamburguer--open {
+    background-image: url("../multimedia/x.svg");
+    filter: invert(1);
+}
+
+.nav__overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s opacity;
+
+}
+
+.nav__overlay--show {
+    opacity: 1;
+
+    pointer-events: unset;
+}
+
+.nav__menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--colorR125);
+    color: rgb(230, 230, 230);
+    font-size: 1.5rem;
+    width: 65%;
+    max-width: 400px;
+    padding-top: 5rem;
+    list-style: none;
+    overflow: hidden;
+    right: -100%;
+    transition: right .5s;
+}
+
+.nav__menu--show {
+    right: 0 !important;
+}
+
+.nav__item {
+    width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.material-symbols-outlined {}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--almost-white);
+    font-size: 2rem;
+}
+
+
+
+.nav__login {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nav__login--border-t {
+    border-top: 1px solid white;
+    padding-top: 2rem;
+}
+
+.nav__login--border {
+    border-radius: 1em;
+    margin-top: 2rem;
+    border: 1px solid var(--almost-white);
+}
+
+.nav__sign {
+    display: inline-block;
+    color: var(--almost-white);
+    padding: .7rem 0;
+    text-decoration: none;
+}
+
+.nav__login--border {}
