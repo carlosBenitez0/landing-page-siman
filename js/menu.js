@@ -11,9 +11,6 @@ nav_hamburguer.addEventListener("click", () => {
 const social_desktop = document.querySelector(".social-desktop");
 const social_mobile = document.querySelector(".social-mobile");
 
-console.log(social_desktop);
-console.log(social_mobile);
-
 window.onload = function () {
   if (window.innerWidth >= 768) {
     social_mobile.classList.toggle("no-visible");
