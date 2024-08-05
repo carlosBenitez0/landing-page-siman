@@ -337,6 +337,7 @@ h3 {
     }
 
     .nav__menu li:hover>a {
+        border-radius: 1rem !important;
         background-color: var(--colorR50);
         color: #fff;
         background: linear-gradient(to right, var(--colorR100), var(--colorR75));
@@ -442,39 +443,9 @@ h3 {
         width: 100%;
     }
 
-
-
-    /* HERO */
-    /* 
-    
-    .hero__cta {
-        font-size: 2rem;
-        background-color: var(--colorR150);
-        color: #fff;
-        display: inline-block;
-        padding: .7rem 1rem;
-        border-radius: 1rem;
-        text-decoration: none;
-        font-weight: 700;
+    /* UTILIDADES */
+    .actual-page {
+        border-radius: unset !important;
+        border-bottom: 2px solid var(--colorR75);
     }
-    
-    .hero__text a:last-child {
-        background-color: white;
-        border: 2px solid var(--colorR150);
-        color: var(--colorR150);
-    }
-    
-    
-    .social__media {
-        display: grid;
-        gap: 3rem;
-        grid-auto-flow: column;
-        justify-content: center;
-    }
-    
-    .social__icon {
-        height: 4rem;
-        width: 4rem;
-        cursor: pointer;
-    } */
 }

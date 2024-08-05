@@ -305,6 +305,10 @@ h3 {
 }
 
 @media (min-width: 768px) {
+    body {
+        height: unset !important;
+    }
+
     .nav {
         gap: 2rem;
         overflow: visible;
@@ -375,6 +379,7 @@ h3 {
     }
 
     .nav__menu li:hover>a {
+        border-radius: 1rem !important;
         background-color: var(--colorR50);
         color: #fff;
         background: linear-gradient(to right, var(--colorR100), var(--colorR75));
@@ -436,5 +441,11 @@ h3 {
         font-size: 1.4rem;
         flex-grow: 1;
         max-width: unset;
+    }
+
+    /* UTILIDADES */
+    .actual-page {
+        border-radius: unset !important;
+        border-bottom: 2px solid var(--colorR75);
     }
 }
