@@ -137,6 +137,7 @@ main {
     padding: 2rem 1rem;
     color: var(--almost-white);
     margin-bottom: 2rem;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.389);
 }
 
 .contact__address {
@@ -257,6 +258,23 @@ main {
         font-size: 1.4rem;
         flex-grow: 1;
         max-width: unset;
+    }
+
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form__group:nth-child(5) {
+        grid-column: 1/3;
+    }
+
+    .form__group:nth-child(6) {
+        grid-column: 1/3;
+    }
+
+    .form__group .form__input {
+        padding-right: 1rem;
     }
 
     /* UTILIDADES */
