@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/best-css-reset.css">
+    <!-- FAVICON -->
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/dc69f3e0o/image/upload/v1722612902/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/ptzzfc7zvuwsaunqr5mv.png"
+        type="image/x-icon">
+
+    <title>Siman - Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav container">
+            <img src="https://res.cloudinary.com/dc69f3e0o/image/upload/v1722614563/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/yv4upvhjy2iko4etrgqv.png"
+                class="nav__logo" alt="Logo de Siman">
+
+            <div class="nav__hamburguer"></div>
+
+            <div class="nav__overlay">
+                <ul class="nav__menu">
+
+                    <li class="nav__item">
+                        <a href="./index.html" class="nav__link">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./productos.html" class="nav__link">Productos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link actual-page">Contacto</a>
+                    </li>
+
+                    <li class="nav__login nav__login--border-t">
+                        <a href="./login.html" class="nav__sign">Iniciar Sesión</a>
+                    </li>
+
+                    <li class="nav__login nav__login--border">
+                        <a href="./registro.html" class="nav__sign">Registrarse</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="form-container">
+            <h1 class="form__title">Ponte en contacto con nosotros hoy.</h1>
+            <form class="form">
+
+                <div class="form__group">
+                    <input class="form__input" type="text" name="name" placeholder="Nombre">
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="text" name="lastname" placeholder="Apellido">
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="text" name="email" placeholder="Correo electrónico">
+                </div>
+                <div class="form__group">
+                    <input class="form__input" type="text" name="subject" placeholder="asunto">
+                </div>
+                <div class="form__group">
+                    <textarea class="form__textarea form__input" name="message" rows="5"
+                        placeholder="Mensaje"></textarea>
+                </div>
+                <div class="form__group">
+                    <button class="form__button accent" type="submit">Enviar</button>
+                </div>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Información de Contacto</h2>
+            <address>
+                <p>Dirección de la tienda</p>
+                <p>Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p>Email: <a href="mailto:info@tienda.com">info@tienda.com</a></p>
+            </address>
+        </section>
+
+        <section>
+            <h2>Ubicación</h2>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.323826098726!2d-89.15452692677502!3d13.698826798521562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63373e0661bc8d%3A0xfc9ccfe0f41d8144!2sAlmacenes%20SIMAN%20%E2%80%A2%20Plaza%20Mundo!5e0!3m2!1ses-419!2ssv!4v1722893579418!5m2!1ses-419!2ssv"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Siman. Todos los derechos reservados.</p>
+    </footer>
+    <!-- <div class="just-space"></div> -->
+    <script src="./js/contacto.js"></script>
+
+</body>
+
+</html>

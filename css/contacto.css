@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* colors */
+    /* Color principal para elementos destacados */
+    --main-color: #A83338;
+
+    /* Color más oscuro para encabezados importantes, botones primarios, y énfasis */
+    --colorR150: #6e0000;
+
+    /* Color oscuro para subtítulos, bordes, y elementos secundarios */
+    --colorR125: #830d0b;
+
+    /* Color medio para fondos de secciones, efectos de hover, etc.*/
+    --colorR100: #971a16;
+
+    /* Color más claro para fondos alternativos, iconos, etc. */
+    --colorR75: #ac2620;
+
+    /* Color más claro para acentos y enlaces*/
+    --colorR50: #c0332b;
+
+    /* Color casi blanco, para secciones en las que el fondo es alguno de los anteriores */
+    --almost-white: rgb(231, 231, 231);
+    --almost-black: rgb(21, 21, 21);
+
+    /* fonts */
+    /* - Open Sans: Para el texto principal y cuerpos de texto (p, li, span, etc.) */
+    --open_sans: "Open Sans", sans-serif;
+    /* - Merriweather: Para encabezados y títulos destacados (h1, h2, h3, etc.) */
+    --Merriweather: "Merriweather", serif;
+    /* - Raleway: Para botones, etiquetas de filtro, etc. (clases específicas como .brand, .accent, botones especiales, etc.) */
+    --raleway: "Raleway", sans-serif;
+}
+
+body {
+    background-color: var(--colorR150);
+}
+
+header {
+    background-color: white;
+
+}
+
+.form__title {
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+    text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.53);
+}
+
+/* BODY */
+main {
+    width: 100%;
+}
+
+/* LOGIN */
+
+
+.form-container {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, var(--colorR50), var(--colorR150));
+    margin: 0 auto;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 95%;
+    padding: 2rem;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.form__group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__label {
+    font-size: 1.6rem;
+}
+
+.form__group .form__input {
+    width: 100%;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    background-color: rgb(223, 223, 223);
+}
+
+.form__group .has--text,
+.form__group:hover .form__input {
+    outline: 1.5px solid rgba(0, 0, 0, 0.285);
+}
+
+.form__textarea {
+    resize: none;
+}
+
+.input__icon--nocursor {
+    cursor: unset;
+}
+
+.form__button {
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    color: var(--almost-white);
+    background-color: var(--colorR100);
+    transition: background-color .3s;
+}
+
+.form__button:hover {
+    background-color: var(--colorR150);
+}
+
+/* UTILIDADES */
+/* colocar espacio al final del home */
+.just-space {
+    height: 3rem;
+}
+
+.no-visible {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        height: unset !important;
+    }
+
+    .form-container {
+        padding-bottom: 4rem;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .form {
+        width: 45rem;
+        min-width: 35rem;
+    }
+
+    .logo__container img {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .form__label {
+        font-size: 1.8rem;
+    }
+
+    .group__container .form__input {
+        width: 100%;
+
+        padding: 1.5rem 1rem;
+        font-size: 1.8rem;
+    }
+
+    .form__button {
+        padding: 1.5rem 1rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .validations {
+        width: 100%;
+        max-width: unset;
+        margin: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .validation {
+        display: block;
+        background-color: #f8d7da;
+        color: var(--colorR150);
+        border: 1px solid #f5c6cb;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        font-size: 1.4rem;
+        flex-grow: 1;
+        max-width: unset;
+    }
+
+    /* UTILIDADES */
+    .actual-page {
+        border-radius: unset !important;
+        border-bottom: 2px solid var(--colorR75);
+    }
+}
