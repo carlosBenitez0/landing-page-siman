@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* colors */
+    /* Color principal para elementos destacados */
+    --main-color: #A83338;
+
+    /* Color más oscuro para encabezados importantes, botones primarios, y énfasis */
+    --colorR150: #6e0000;
+
+    /* Color oscuro para subtítulos, bordes, y elementos secundarios */
+    --colorR125: #830d0b;
+
+    /* Color medio para fondos de secciones, efectos de hover, etc.*/
+    --colorR100: #971a16;
+
+    /* Color más claro para fondos alternativos, iconos, etc. */
+    --colorR75: #ac2620;
+
+    /* Color más claro para acentos y enlaces*/
+    --colorR50: #c0332b;
+
+    /* Color casi blanco, para secciones en las que el fondo es alguno de los anteriores */
+    --almost-white: rgb(231, 231, 231);
+    --almost-black: rgb(21, 21, 21);
+
+    /* fonts */
+    /* - Open Sans: Para el texto principal y cuerpos de texto (p, li, span, etc.) */
+    --open_sans: "Open Sans", sans-serif;
+    /* - Merriweather: Para encabezados y títulos destacados (h1, h2, h3, etc.) */
+    --Merriweather: "Merriweather", serif;
+    /* - Raleway: Para botones, etiquetas de filtro, etc. (clases específicas como .brand, .accent, botones especiales, etc.) */
+    --raleway: "Raleway", sans-serif;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: 'Merriweather', serif;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .accent {
+        font-family: 'Raleway', sans-serif;
+    }
+
+    header {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .7)), url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722915632/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/wfbrxnddfsedh39vl3vw.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 0 1rem;
+    }
+
+    .nav {
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        width: 100%;
+    }
+
+    .nav__logo {
+        height: 5rem;
+    }
+
+    .nav__hamburguer {
+        width: 40px;
+        height: 50%;
+        background-image: url("../multimedia/menu-ham.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        z-index: 100;
+        filter: invert(0);
+        transition: background-image, filter .3s;
+        border-radius: 50%;
+        /* filter: drop-shadow(0 0 .5rem white); */
+    }
+
+    .nav__hamburguer--open {
+        background-image: url("../multimedia/x.svg");
+        filter: invert(1);
+    }
+
+    .nav__overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        inset: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s opacity;
+
+    }
+
+    .nav__overlay--show {
+        opacity: 1;
+
+        pointer-events: unset;
+    }
+
+    .nav__menu {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: var(--colorR125);
+        color: rgb(230, 230, 230);
+        font-size: 1.5rem;
+        width: 65%;
+        max-width: 400px;
+        padding-top: 5rem;
+        list-style: none;
+        overflow: hidden;
+        right: -100%;
+        transition: right .5s;
+    }
+
+    .nav__menu--show {
+        right: 0 !important;
+    }
+
+    .nav__item {
+        width: 80%;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+
+    .nav__link {
+        text-decoration: none;
+        color: var(--almost-white);
+        font-size: 2rem;
+    }
+
+
+
+    .nav__login {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .nav__login--border-t {
+        border-top: 1px solid white;
+        padding-top: 2rem;
+    }
+
+    .nav__login--border {
+        border-radius: 1em;
+        margin-top: 2rem;
+        border: 1px solid var(--almost-white);
+    }
+
+    .nav__sign {
+        display: inline-block;
+        color: var(--almost-white);
+        padding: .7rem 0;
+        text-decoration: none;
+    }
+
+    /* HERO */
+
+    .hero__title {
+        color: transparent;
+        /* Hacemos el texto transparente para aplicar el degradado como fondo */
+        background: linear-gradient(to right, rgb(255, 103, 103), #ff0000);
+        /* Degradado lineal de izquierda a derecha */
+        -webkit-background-clip: text;
+        /* Para navegadores basados en WebKit (Chrome, Safari) */
+        background-clip: text;
+    }
+
+    .hero__text {
+        padding: 2rem;
+        text-align: center;
+        color: white;
+    }
+
+    .hero__p {
+        line-height: 1.5rem 0;
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .hero__p .hero__span {
+        color: rgba(0, 255, 0, 0.692);
+        font-weight: bold;
+    }
+
+    .hero__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero__cta {
+        font-size: 2rem;
+        color: #fff;
+        display: inline-block;
+        padding: .7rem 1rem;
+        border-radius: 1rem;
+        text-decoration: none;
+        font-weight: 700;
+
+    }
+
+    main {
+        width: 95%;
+        margin: auto;
+    }
+
+    .categories-container {
+        margin: 3rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .categories__card {
+        padding: 2rem;
+        height: 20rem;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .categories__card:first-child {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722916004/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/acpbmfhbqx4jykdw31va.webp);
+    }
+
+    .categories__card:nth-child(2) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722915634/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/o2tcxz2cksh4pejnrrgw.jpg);
+    }
+
+    .categories__card:nth-child(3) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722915632/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/hwavdezodf4hdyraiyov.jpg);
+    }
+
+    .categories__card:last-child {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722915633/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/cfbdzdlfbxtk4u28zqsb.jpg);
+    }
+
+    .categories__text {
+        font-size: 1.6rem;
+        color: white;
+        font-weight: bold;
+    }
+
+    .filter-container {
+        margin-bottom: 3rem;
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .filter {
+        padding: 1rem 1.5rem;
+        font-size: 1.4rem;
+        border-radius: 50px;
+        border: 1px solid black;
+    }
+
+    .footer_p {
+        padding: 3rem;
+        font-size: 1.7rem;
+        color: var(--almost-white);
+        background-color: var(--colorR125);
+        text-align: center;
+    }
+
+
+
+}
+
+.promotions {
+    width: 100%;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.promotions__title {
+    grid-column: 1/3;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.promotion__card {
+    position: relative;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.463);
+    border-radius: .5rem;
+    display: grid;
+    grid-template-rows: 1fr, 5rem;
+}
+
+.card__top {
+    min-height: 17rem;
+    max-height: 20rem;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 1rem;
+}
+
+.card__top--1 {
+    background-image: url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722918729/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/zn5a6mnfwirllquzco8y.webp);
+}
+
+.card__top--2 {
+    background-image: url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722919198/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/gachzreinc33yrtluqnr.webp);
+}
+
+.card__top--3 {
+    background-image: url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722919814/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/z8j92fo4re0c1g5i16o3.webp);
+}
+
+.card__top--4 {
+    background-image: url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722920077/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/gawjfysgbefbzvnvimtn.webp);
+}
+
+.card__top--5 {
+    background-image: url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722920322/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/xclzwaoq9y9zxnnharg3.webp);
+}
+
+.card__top--6 {
+    background-image: url(https://res.cloudinary.com/dc69f3e0o/image/upload/v1722920443/Modulo-1:%20Landing%20Page%20Siman%20El%20Salvador/girwain6k6or9qjsdxx5.webp);
+}
+
+.card__discount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 1.5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    margin-top: 1rem;
+    background-color: #ff7b00;
+    color: white;
+    box-shadow: .5rem .5rem .7rem rgba(0, 0, 0, 0.432);
+}
+
+.discount__p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.price-dashed {
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.66);
+}
+
+.card__bottom {
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 5rem;
+    background-color: rgb(232, 232, 232);
+    box-shadow: 0 -0.5rem .5rem rgba(0, 0, 0, 0.184);
+}
+
+.card__button {
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    padding: .5rem;
+    background-color: rgb(120, 120, 120);
+    border-radius: .3rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* UTILIDADES */
+
+
+@media (min-width: 768px) {
+    header {
+        min-height: 100vh;
+    }
+
+    .nav {
+        overflow: visible;
+        padding: 4rem 2rem;
+        display: flex;
+        margin: unset;
+        width: 100%;
+    }
+
+    .nav__hamburguer {
+        display: none;
+    }
+
+    .nav__overlay {
+        position: unset;
+        background-color: transparent;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .nav__menu {
+        position: unset;
+        width: 100%;
+        max-width: unset;
+        background-color: unset;
+        padding: 0;
+        overflow: unset;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav__item {
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .nav__link {
+        color: var(--almost-black);
+        font-size: 1.8rem;
+        width: max-content;
+        font-weight: 600;
+    }
+
+    .nav__sign {
+        padding: 1rem;
+        color: var(--colorR150);
+        font-size: 1.8rem;
+        font-weight: 600;
+        width: max-content;
+    }
+
+    .nav__login--border-t {
+        border-top: unset;
+        padding-top: unset;
+    }
+
+    .nav__login--border {
+        border-radius: 1rem;
+        margin-top: unset;
+        outline: 1px solid var(--colorR150);
+    }
+
+    .nav__menu li>a {
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .nav__menu li:hover>a {
+        border-radius: 1rem !important;
+        background-color: var(--colorR50);
+        color: #fff;
+        background: linear-gradient(to right, var(--colorR100), var(--colorR75));
+    }
+
+    .nav__login:last-child:hover {
+        outline: unset;
+    }
+
+    .hero__grid {
+        height: inherit;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-width: 100%;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    .hero__left {
+        padding-left: 2rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    .hero__text {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero__buttons {
+        margin: auto 0 0 0;
+        justify-content: unset;
+    }
+
+    .hero__text {
+        margin: auto 0;
+    }
+
+    .hero__title {
+        font-size: 5rem;
+    }
+
+    .hero__p {
+        font-size: 2.3rem;
+    }
+
+    .hero__buttons {
+        justify-content: left;
+    }
+
+    .categories-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "card1 card2 card3"
+            "card1 card4 card3";
+    }
+
+    .categories__card {
+        height: 200px;
+    }
+
+    .categories__card:first-child {
+        grid-area: card1;
+    }
+
+    .categories__card:nth-child(2) {
+        grid-area: card2;
+    }
+
+    .categories__card:nth-child(4) {
+        grid-area: card4;
+    }
+
+    .categories__card:last-child {
+        grid-area: card3;
+    }
+
+    .categories__text {}
+
+    /* UTILIDADES */
+    .actual-page {
+        border-radius: unset !important;
+        border-bottom: 2px solid var(--colorR75);
+    }
+}
